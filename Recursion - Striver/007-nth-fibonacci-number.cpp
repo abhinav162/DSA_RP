@@ -13,8 +13,8 @@ int fibonacci(int n)
 
 int main()
 {
-// input output for files
-#define TxtIO
+    // input output for files
+    #define TxtIO
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
