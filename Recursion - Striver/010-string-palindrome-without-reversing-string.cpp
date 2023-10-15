@@ -1,4 +1,12 @@
-// FILEPATH: /workspaces/DSA_RP/Recursion - Striver/010-string-palindrome-without-reversing-string.cpp
+/*
+Approach : 
+    1. We compare the first and last character of the string.
+    2. If they are equal, we move to the next character.
+    3. If they are not equal, we return false.
+    4. We do this recursively for all the characters in the string.
+    5. If we reach the end of the string, we return true.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
