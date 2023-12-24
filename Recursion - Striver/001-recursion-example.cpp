@@ -15,7 +15,7 @@ void printC(int n)
 
 int main() 
 {
-    // input output for files
+    // input output for filesṇṇ
     #define TxtIO 
     freopen("input.txt","r",stdin); 
     freopen("output.txt","w",stdout);
