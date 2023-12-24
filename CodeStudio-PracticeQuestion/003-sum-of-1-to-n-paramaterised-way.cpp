@@ -1,19 +1,14 @@
-/*
-Back Tracking -
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 
-void print1toN(int n)
+int sumTillN(int n, int sum)
 {
-    if (n <= 0)
-        return;
+    if (n < 1)
+    {
+        return sum;
+    }
 
-    print1toN(n - 1);
-    cout << n << " ";
-
-    return;
+    return sumTillN(n - 1, sum + n);
 }
 
 int main()
@@ -26,7 +21,8 @@ int main()
     // start code here
     int n;
     cin >> n;
-    print1toN(n);
 
+    int sum = 0;
+    cout << sumTillN(n, sum);
     return 0;
 }
