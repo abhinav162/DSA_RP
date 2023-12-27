@@ -45,13 +45,13 @@ string fourSum(vector<int> arr, int target, int n)
 
             while (start < end)
             {
-                int rSum = arr[start] + arr[end];
+                int remainingSum = arr[start] + arr[end];
 
-                if (target3 < rSum)
+                if (target3 < remainingSum)
                 {
                     end--;
                 }
-                else if (target3 > rSum)
+                else if (target3 > remainingSum)
                 {
                     start++;
                 }
