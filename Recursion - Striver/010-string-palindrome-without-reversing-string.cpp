@@ -28,12 +28,12 @@ int main()
 {
     // input output for files
     #define TxtIO
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
+    freopen("../input.txt","r",stdin);
+    freopen("../output.txt","w",stdout);
 
     //start code here
 
-    string s = "abba";
+    string s = "ababa";
     
     if(isPalindrome(s,s.length(),0))
     {

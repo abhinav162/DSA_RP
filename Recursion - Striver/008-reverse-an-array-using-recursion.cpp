@@ -10,6 +10,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// two pointer method using recursion
+void reverseArray(vector<int> &arr, int i, int j)
+{
+    if (i >= j)
+    {
+        return;
+    }
+
+    swap(arr[i], arr[j]);
+    reverseArray(arr, ++i, --j);
+}
+
+
+// swaping half elements (one pointer method)
 void reverseArr(vector<int> &arr, int n, int i)
 {
     if (i >= n / 2)
@@ -28,8 +42,8 @@ int main()
 {
 // input output for files
 #define TxtIO
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("../input.txt", "r", stdin);
+    freopen("../output.txt", "w", stdout);
 
     // start code here
     vector<int> arr = {1, 2, 3, 4, 5, 6};
