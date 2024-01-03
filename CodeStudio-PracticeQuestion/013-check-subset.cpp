@@ -1,12 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+Approach :
+1. Create a map of first array and store the frequency of each element.
+2. Now traverse the second array and decrement the frequency of those element which is present in second array. (what will happen here is if any element which is not present in 1st array but it is in 2nd array then its frequency will become negative)
+3- Now thech if any element in map have frequency less than 0, if yes then array 2 se not subset.
+*/
 bool checkSubset(vector<int> &arr1, vector<int> &arr2, int n, int m)
 {
     // Write your code here.
 
     unordered_map<int, int> mp1;
-    unordered_map<int, int> mp2;
 
     for (int i = 0; i < n; i++)
     {

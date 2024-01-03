@@ -18,8 +18,8 @@ void bubbleSort(vector<int> &arr)
             if (arr[j] > arr[j + 1])
             {
                 swap(arr[j], arr[j + 1]);
+                didSwap = 1;
             }
-            didSwap = 1;
         }
 
         if (didSwap == 0) // if no swap is done then the array is already sorted so break the loop

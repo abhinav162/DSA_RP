@@ -10,16 +10,16 @@ void selectionSort(vector<int> &arr)
     int n = arr.size();
     for (int i = 0; i < n - 1; i++)
     {
-        int minIndex = i;
+        int minNumIndex = i; // store index of minimum number b/w i -> n-1
 
         for (int j = i; j < n; j++)
         {
-            if (arr[j] < arr[minIndex])
+            if (arr[j] < arr[minNumIndex])
             {
-                minIndex = j;
+                minNumIndex = j;
             }
         }
-        swap(arr[i], arr[minIndex]);
+        swap(arr[i], arr[minNumIndex]);
     }
 }
 
