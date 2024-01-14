@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+    - Put the maximum element at the last index of the array using adjacent swaps and then decrement the last index.
+    - Optimization -- If no swap is done then the array is already sorted so break the loop, so that outer loop doesn't have to check for rest of the elements. (it will make the time complexity of the best case O(n))
+*/
 void bubbleSort(vector<int> &arr)
 {
-    /*
-    - Put the maximum element at the last index of the array using adjacent swaps and then decrement the last index.
-
-    - Optimization -- If no swap is done then the array is already sorted so break the loop, so that outer loop doesn't have to check for rest of the elements. (it will make the time complexity of the best case O(n))
-    */
-
     int n = arr.size();
     for (int i = n - 1; i > 0; i--)
     {
@@ -29,6 +27,24 @@ void bubbleSort(vector<int> &arr)
     }
 }
 
+void bubbleSortRecursive(vector<int> &arr, int n)
+{
+    if(n == 1)
+    {
+        return;
+    }
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (arr[i] > arr[i + 1])
+        {
+            swap(arr[i], arr[i + 1]);
+        }
+    }
+
+    bubbleSortRecursive(arr, n - 1);
+}
+
 int main()
 {
     // input output for files
@@ -38,7 +54,8 @@ int main()
     // start code here
     vector<int> arr = {5, 3, 6, 7, 2, 8, 0, 2};
 
-    bubbleSort(arr);
+    // bubbleSort(arr);
+    bubbleSortRecursive(arr, arr.size());
 
     for (int i = 0; i < arr.size(); i++)
     {
