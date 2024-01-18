@@ -1,27 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-void findC(int i, int n, int k, vector<int> &temp, vector<vector<int>> &res)
+void findC(int i, int n, int k, vector<int> &temp, int target, vector<vector<int>> &res)
 {
     if (i > n)
     {
-        if (k == 0)
+        if (k == 0 && target == 0)
         {
             res.push_back(temp);
         }
         return;
     }
 
-    // if (k == 0)
-    // {
-    //     res.push_back(temp);
-    //     return;
-    // }
-
     temp.push_back(i);
-    findC(i + 1, n, k - 1, temp, res);
+    findC(i + 1, n, k - 1, temp, target-i, res);
     temp.pop_back();
 
-    findC(i + 1, n, k, temp, res);
+    findC(i + 1, n, k, temp, target, res);
 }
 
 int main()
@@ -39,7 +33,7 @@ int main()
     vector<vector<int>> res;
     vector<int> temp;
 
-    findC(1, n, k, temp, res);
+    findC(1, n, k, temp, 7, res);
 
     for (auto r : res)
     {
