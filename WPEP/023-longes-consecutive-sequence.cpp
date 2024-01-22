@@ -29,7 +29,8 @@ int main()
             continue;
         }
 
-        // if i - 1 is not present in the map then we check for the consecutive numbers
+        // if i - 1 is not present in the map then we check for the consecutive numbers as the current number becomes the starting number of the sequence
+        
         int len = 0, current = i; // current is the current number we are checking for and if we find it then we increment the length by 1 and check for the next number i.e. current + 1 till we find the number which is not present in the map
         while (mp.find(current) != mp.end()) 
         {
